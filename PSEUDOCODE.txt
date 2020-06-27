@@ -1,0 +1,136 @@
+:: PSEUDOCODE CETAK_OPERASI::
+
+int p=0;
+double a=0;
+double b=0;
+cetaksemua(OperasiBilanganAbs OB,double x, double y):
+        OB.setA(x);
+        OB.setB(y);
+        OB.setC();
+        OB.tampil();
+
+	print("1. Hitung Luas Persegi");
+   	print("2. Hitung Luas Persegi Panjang");
+        print("3. Hitung Luas Segitiga");
+        print("4. Hitung Luas Jajar Genjang");
+        print("5. Hitung Luas Lingkaran");
+        print("6. Keluar Program");
+        print("Masukkan pilihan anda [1-6] : ");
+        try {
+            pilih=scan;
+        if (pilih==1) {
+            print("--- HITUNG LUAS PERSEGI PANJANG ---");
+            print("Masukkan panjang sisi persegi : ");
+            a=scan();
+            Persegi persegi = new Persegi();
+            cetaksemua(persegi,a,1);
+            menu();
+        }
+        
+        else if (pilih==2) {
+            print("--- HITUNG LUAS PERSEGI PANJANG ---");
+            print("Masukkan panjang : ");
+            a=scan();
+            print("Masukkan lebar : ");
+            b=scan();
+            Persegi_Panjang persegi_panjang = new Persegi_Panjang();
+             cetaksemua(persegi_panjang,a,b);
+            menu();
+        }
+        else if (pilih==3) {
+            print("--- HITUNG LUAS SEGITIGA ---");
+            print("Masukkan alas : ");
+            a=scan();
+            print("Masukkan tinggi : ");
+            b=scan();
+            Segitiga segitiga = new Segitiga();
+            cetaksemua(segitiga,a,b);
+            menu();
+        }
+        else if (pilih==4) {
+            print("--- HITUNG LUAS JAJAR GENJANG ---");
+            print("Masukkan alas : ");
+            a=scan();
+            print("Masukkan tinggi : ");
+            b=scan();
+            Jajar_Genjang jajar_genjang = new Jajar_Genjang();
+            cetaksemua(jajar_genjang,a,b);
+            menu();
+        }
+        else if (pilih==5) {
+            print("--- HITUNG LUAS LINGKARAN ---");
+            print("Masukkan jari-jari : ");
+            a=scan();
+            Lingkaran lingkaran = new Lingkaran();
+            cetaksemua(lingkaran,a,1);
+            menu();
+        }
+        else if (pilih==6) {
+            print("Anda akan keluar dari program");
+            System.exit(0);
+        }
+        else{
+            print("Pilihan tidak diketahui, mohon masukkan pilihan menu dengan benar [1-6]");
+            menu();
+        }
+        }
+        catch(InputMismatchException e){
+            print("Maaf, program error! Jenis error : "+e);
+            print("Program akan diulang");
+            menu();
+        }
+    }
+
+
+:: PSEUDOCODE PERSEGI::
+
+double a;
+double b;
+
+1. setA= a;
+2. setB =1;
+3. setC= a*a;
+4. print("Luas dari Persegi dengan sisi "+a+" * "+a+" = "+c);
+
+
+:: PSEUDOCODE PERSEGI_PANJANG ::
+
+double a;
+double b;
+
+1. setA= a;
+2. setB =b;
+3. setC= a*b;
+4. print("Luas dari Persegi Panjang dengan panjang "+a+" , lebar "+b+" = "+c)
+
+:: PSEUDOCODE SEGITIGA ::
+
+double a;
+double b;
+
+1. setA= a;
+2. setB =b;
+3. setC= a*b/2;
+4. print("Luas dari Segitiga dengan alas "+a+" , tinggi "+b+" = "+c);
+
+:: PSEUDOCODE JAJAR_GENJANG ::
+
+double a;
+double b;
+
+1. setA= a;
+2. setB =b;
+3. setC= a*b;
+4. print("Luas dari Jajar Genjang dengan alas "+a+" , tinggi "+b+" = "+c)
+
+:: PSEUDOCODE LINGKARAN ::
+double a;
+double b;
+
+1. setA= a;
+2. setB = 1;
+3. setC= 3.14285714*a*a;
+4. print("Luas dari Lingkaran dengan jari-jari "+a+" = "+c)
+
+
+
